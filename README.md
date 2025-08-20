@@ -23,6 +23,6 @@
        d) Auxiliary-Loss-Free Load Balancing
           - DeepSeek-V3 introduced a mechanism to balance load across experts dynamically, achieving about 90% utilization without traditional auxiliary loss terms.
 
-      e) Reinforcement Learning Emphasis
+       e) Reinforcement Learning Emphasis
          - DeepSeek notably leveraged reinforcement learning (RL) heavily arguing that reasoning capabilities can emerge through RL without strong supervised fine-tuning.
            
