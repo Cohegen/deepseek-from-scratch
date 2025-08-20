@@ -26,4 +26,7 @@
 
        e) Reinforcement Learning Emphasis
          - DeepSeek notably leveraged reinforcement learning (RL) heavily arguing that reasoning capabilities can emerge through RL without strong supervised fine-tuning.
+
+- This repository is structured in a such that I'll be giving you a general guide of how Deepseek works under the hood.
+  
            
