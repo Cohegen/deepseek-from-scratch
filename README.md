@@ -1,6 +1,6 @@
 # DeepSeek Implementation from Scratch
 
-![Output Example](../deepseek-from-scratch/deepseek_assets/deepseek.webp)
+![Output Example](../deepseek_assets/deepseek1.png)
 
 ## Overview
   1. Launch and Global Impact
