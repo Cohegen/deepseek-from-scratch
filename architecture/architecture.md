@@ -13,47 +13,8 @@
 - Our task it to predict what word comes after the word "you".
 - Before the predicted part let's begin our journey from the beginning from the start. So we give our model our example sentence as input.
 - LLMs don't directly process text directly there are crucial process that take place before doing that, they are:
-   1. Tokenization : 
+   1. Tokenization : each word in the broken down into characters known as tokens. Tokens are small units of words,subwords or characters in a input sequence. Then each character is assigned a unique ID,
 
-```
-\documentclass[border=10pt]{standalone}
-\usepackage{tikz}
-\usetikzlibrary{shapes.geometric, arrows.meta, positioning}
-\usepackage{amsmath}
-
-\begin{document}
-
-% Defining styles for the flowchart
-\tikzstyle{process} = [rectangle, minimum width=4cm, minimum height=1.2cm, text centered, draw=black, fill=blue!10, rounded corners, font=\small]
-\tikzstyle{arrow} = [thick, -Stealth, color=black]
-
-\begin{tikzpicture}[node distance=2.5cm and 3cm, auto]
-
-% Step 1: Original Sentence
-\node (sentence) [process] {Sentence: ``Attention is all you''};
-
-% Step 2: Tokenization
-\node (tokens) [process, below=of sentence] {Tokens: [``Attention'', ``is'', ``all'', ``you'']};
-
-% Step 3: Token IDs
-\node (ids) [process, below=of tokens] {
-  \begin{tabular}{c|c}
-    \textbf{Token} & \textbf{ID} \\
-    \hline
-    Attention & 1012 \\
-    is & 52 \\
-    all & 348 \\
-    you & 77 \\
-  \end{tabular}
-};
-
-% Arrows with labels
-\draw [arrow] (sentence) -- node {Tokenization} (tokens);
-\draw [arrow] (tokens) -- node {Assign IDs} (ids);
-
-\end{tikzpicture}
-
-\end{document}
 
 
 
