@@ -13,7 +13,10 @@
 - Our task it to predict what word comes after the word "you".
 - Before the predicted part let's begin our journey from the beginning from the start. So we give our model our example sentence as input.
 - LLMs don't directly process text directly there are crucial process that take place before doing that, they are:
-   1. Tokenization : each word in the broken down into characters known as tokens. Tokens are small units of words,subwords or characters in a input sequence. Then each character is assigned a unique ID,
+   1. Tokenization : each word in the broken down into characters known as tokens. Tokens are small units of words,subwords or characters in a input sequence. Then each character is assigned a unique ID.
+   2. Vector embedding - the tokens are mapped into a vector so as to capture their meaning. The number of dimensions depends on the model being used some have 768 dimensions others have 12808 dimensions.
+   3. Positional embedding - the vector embedding carry some information of each token in the sequence, but, there's a problem 
+
 
 
 
