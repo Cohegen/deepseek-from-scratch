@@ -82,6 +82,10 @@ The embeddings of fluffy and blue would attend to the embedding of creature in o
 The maginitude of relationships among tokens with each other is also seen.
 ![Output examples:](../deepseek_assets/15.webp)
 
+## Deep dive
+In the transformer model, we use a grid of values to represent the relevance between words. In the previous diagram we obtained the magnitude of relationships among tokens, but to capture how much attention each token should pay to each other we normalize these magnitudes to obtain attention scores. These scores tells a particular token in the input sequence,how much attention in should pay to the other tokens.
+The normalization function we use is the softmax function. This functions returns a probability distribution of attention scores.
+![Output examples:](../deepseek_assets/15.webp)
 
 
 
