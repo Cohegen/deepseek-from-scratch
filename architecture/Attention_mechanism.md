@@ -68,6 +68,10 @@ In order for the model to accurately predict the next word, the final vector in 
 ![Output examples:](../deepseek_assets/11.webp)
 
 ## The Attention Block
+In deep learning, word embeddings are used to represent words and their positions in a context. The goal in attention mechanism is to refine the meaning of these embeddings by incorporating meaning from other words. This refining process is achieved through matrix vector multiplications, whre tunable weights are learned based on the data.
+This done by computing a query vector for each word, which is obtained by multiplying a learned query matrix with the embeddings of each word.
+
+![Output examples:](../deepseek_assets/12.webp)
 
 
 
