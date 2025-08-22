@@ -91,6 +91,8 @@ The normalization function we use is the softmax function.
 This functions returns a probability distribution of attention scores.
 ![Output examples:](../deepseek_assets/6-softmax.png)
 
+The variables Q and K represent the query and key vectors, and the numerator represents the dot product between the keys and queries. We then divede the values by the square root of the dimension for numerical stability. During trainnig, the model predicts every possible token for efficiency.
+![Output examples:](../deepseek_assets/16.webp)
 
 
 
