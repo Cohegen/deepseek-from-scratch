@@ -73,6 +73,16 @@ This done by computing a query vector for each word, which is obtained by multip
 
 ![Output examples:](../deepseek_assets/12.webp)
 
+Similarly, a key matrix is multiplied with the embeddings to obtain key vectors. The dot product between the keys and queries measures their alignment, indicationg which embeddigs attend to each other.
+![Output examples:](../deepseek_assets/13.webp)
+
+The embeddings of fluffy and blue would attend to the embedding of creature in our example. This process involves tuning a large number of parameters to minimize the cost function.
+![Output examples:](../deepseek_assets/14.webp)
+
+The maginitude of relationships among tokens with each other is also seen.
+![Output examples:](../deepseek_assets/15.webp)
+
+
 
 
 
