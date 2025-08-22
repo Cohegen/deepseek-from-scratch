@@ -22,6 +22,8 @@ For example the word 'mole' in each sentence in the diagram above, has different
 
 ![Output examples:](../deepseek_assets/8.webp)
 
+![Output examples:](../deepseek_assets/9.webp)
+
 
 
 
