@@ -79,11 +79,16 @@ Similarly, a key matrix is multiplied with the embeddings to obtain key vectors.
 The embeddings of fluffy and blue would attend to the embedding of creature in our example. This process involves tuning a large number of parameters to minimize the cost function.
 ![Output examples:](../deepseek_assets/14.webp)
 
-The maginitude of relationships among tokens with each other is also seen.
+The magnitude of relationships among tokens with each other is also seen.
 ![Output examples:](../deepseek_assets/15.webp)
 
 ## Deep dive
-In the transformer model, we use a grid of values to represent the relevance between words. In the previous diagram we obtained the magnitude of relationships among tokens, but to capture how much attention each token should pay to each other we normalize these magnitudes to obtain attention scores. These scores tells a particular token in the input sequence,how much attention in should pay to the other tokens.
+In the transformer model, we compute a matrix of values (the attention matrix) that represents the relevance between tokens. The raw dot products between queries and keys give us the attention scores — a measure of how strongly tokens are related.
+
+To stabilize training and prevent the scores from growing too large in high dimensions, we divide them by √d (where d is the dimensionality of the key/query vectors).
+
+Finally, we apply the softmax function to normalize these scaled scores into attention weights. These weights tell each token in the input sequence how much attention it should pay to every other token.
+
 ![Output examples:](../deepseek_assets/16.webp)
 The normalization function we use is the softmax function.
 ![Output examples:](../deepseek_assets/8-softmaxEqn.png)
