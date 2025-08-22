@@ -36,10 +36,10 @@ The **Transformer**, introduced in *"Attention Is All You Need"* (Vaswani et al.
 
 ---
 
-- The goal of the transformer model is to predict the next word in a sequence of words.
+In language modeling, causal transformers like GPT predict the next word. In other tasks (like translation), the transformer can generate entire sequences conditioned on input.
 ![Output examples:](../deepseek_assets/2.webp)
 
-Tokens, which smallest units of text, are associated with high-dimensional vectors called embeddings.
+Tokens, which are the text units chosen by the tokenizer (e.g., words, subwords, or characters), are associated with high-dimensional embeddings.
 ![Output examples:](../deepseek_assets/3.webp)
 
 These embeddings capture semantic meaning in a high-dimensional space.
@@ -91,7 +91,8 @@ The normalization function we use is the softmax function.
 This functions returns a probability distribution of attention scores.
 ![Output examples:](../deepseek_assets/6-softmax.png)
 
-The variables Q and K represent the query and key vectors, and the numerator represents the dot product between the keys and queries. We then divede the values by the square root of the dimension for numerical stability. During trainnig, the model predicts every possible token for efficiency.
+The variables Q and K represent the query and key vectors, and the numerator represents the dot product between the keys and queries. We then divide the values by the square root of the dimension for numerical stability. It’s not just for stability — scaling by √d helps prevent dot products from growing too large with higher dimensions, which would make the softmax gradients very small.
+During trainnig, the model predicts every possible token for efficiency.
 ![Output examples:](../deepseek_assets/17.webp)
 
 In order to prevent later words from influencing earlier words, we need to ensure that certain spots in the attention pattern are forced to be zero. However, setting them equal to zero would disrupt the normalization of the columns, so we need to find another solution. A suitable solution is to handle certain entries before applying softmax is to set them to negative infinity. This ensures that after applying softmax, those entires becom zero while the column remain normalized. This process is called masked attention, which is widely used in GPT models to prevent later tokens from influencing earlier ones.
