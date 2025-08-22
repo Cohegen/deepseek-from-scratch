@@ -10,4 +10,13 @@ These embeddings capture semantic meanig in a high-dimensional space.
 
 ![Output examples:](../deepseek_assets/5.webp)
 
+The attention mechanism helps adjust these embeddigs to encode richer contextual meanings of tokens within the input sequence.
+
+[!Output examples:](../deepseek_assets/6.webp)
+
+Before diving deep into computational details of the transformer, it's important to consider an example that demonstrates the desired behavoir of attention.
+
+![Output examples:](../deepseek_assets/7.webp)
+
+
 
