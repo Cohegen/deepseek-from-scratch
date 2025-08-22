@@ -84,7 +84,7 @@ The maginitude of relationships among tokens with each other is also seen.
 
 ## Deep dive
 In the transformer model, we use a grid of values to represent the relevance between words. In the previous diagram we obtained the magnitude of relationships among tokens, but to capture how much attention each token should pay to each other we normalize these magnitudes to obtain attention scores. These scores tells a particular token in the input sequence,how much attention in should pay to the other tokens.
-![Output examples:](../deepseek_assets/15.webp)
+![Output examples:](../deepseek_assets/16.webp)
 The normalization function we use is the softmax function.
 ![Output examples:](../deepseek_assets/8-softmaxEqn.png)
 
@@ -92,12 +92,12 @@ This functions returns a probability distribution of attention scores.
 ![Output examples:](../deepseek_assets/6-softmax.png)
 
 The variables Q and K represent the query and key vectors, and the numerator represents the dot product between the keys and queries. We then divede the values by the square root of the dimension for numerical stability. During trainnig, the model predicts every possible token for efficiency.
-![Output examples:](../deepseek_assets/16.webp)
-
-In order to prevent later words from influencing earlier words, we need to ensure that certain spots in the attention pattern are forced to be zero. However, setting them equal to zero would disrupt the normalization of the columns, so we need to find another solution. A suitable solution is to handle certain entries before applying softmax is to set them to negative infinity. This ensures that after applying softmax, those entires becom zero while the column remain normalized. This process is called masked attention, which is widely used in GPT models to prevent later tokens from influencing earlier ones.
 ![Output examples:](../deepseek_assets/17.webp)
 
+In order to prevent later words from influencing earlier words, we need to ensure that certain spots in the attention pattern are forced to be zero. However, setting them equal to zero would disrupt the normalization of the columns, so we need to find another solution. A suitable solution is to handle certain entries before applying softmax is to set them to negative infinity. This ensures that after applying softmax, those entires becom zero while the column remain normalized. This process is called masked attention, which is widely used in GPT models to prevent later tokens from influencing earlier ones.
 ![Output examples:](../deepseek_assets/18.webp)
+
+![Output examples:](../deepseek_assets/19.webp)
 
 
 
