@@ -6,7 +6,7 @@ Tokens, which smallest units of text, are associated with high-dimensional vecto
 ![Output examples:](../deepseek_assets/3.webp)
 
 These embeddings capture semantic meanig in a high-dimensional space.
-![Output examples:](../deepseek_assets/4.webp)
+![Output examples:](../deepseek_assets/4.1.webp)
 
 ![Output examples:](../deepseek_assets/5.webp)
 
