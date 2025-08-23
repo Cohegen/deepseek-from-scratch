@@ -3,7 +3,7 @@
 
 # Why We Need the Transformer in Deep Learning
 
-Before Transformers, the dominant models for sequential data (like text, audio, DNA, time series) were **RNNs** (Recurrent Neural Networks) and their stronger variants like **LSTMs** and **GRUs**. These models read input step by step, passing information forward in sequence. That had some big **limitations**:
+Before Transformers,  the dominant models for sequential data (like text, audio, DNA, time series) were **RNNs** (Recurrent Neural Networks) and their stronger variants like **LSTMs** and **GRUs**. These models read input step by step, passing information forward in sequence. That had some big **limitations**:
 
 ## 🚨 Limitations of RNNs/LSTMs
 1. **Poor handling of long-term dependencies**  
