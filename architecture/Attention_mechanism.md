@@ -5,7 +5,7 @@
 
 Before Transformers,  the dominant models for sequential data (like text, audio, DNA, time series) were **RNNs** (Recurrent Neural Networks) and their stronger variants like **LSTMs** and **GRUs**. These models read input step by step, passing information forward in sequence. That had some big **limitations**:
 
-## 🚨 Limitations of RNNs/LSTMs
+##  Limitations of RNNs/LSTMs
 1. **Poor handling of long-term dependencies**  
    - RNNs struggle to remember information far back in a sequence (like the start of a long paragraph).  
    - Even LSTMs, which improved memory, had practical limits.
