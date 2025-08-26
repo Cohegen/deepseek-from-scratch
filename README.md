@@ -1,4 +1,3 @@
-
 # DeepSeek Implementation from Scratch
 
 ![Output examples](./deepseek_assets/deepseek.webp)
