@@ -113,6 +113,14 @@ In order to prevent later words from influencing earlier words, we need to ensur
 
 ![Output examples:](../deepseek_assets/22.webp)
 
+![Output examples:](../deepseek_assets/23.webp)
+![Output examples:](../deepseek_assets/24.webp)
+![Output examples:](../deepseek_assets/25.webp)
+![Output examples:](../deepseek_assets/26.webp)
+![Output examples:](../deepseek_assets/27.webp)
+
+
+
 
 
 
