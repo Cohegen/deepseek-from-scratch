@@ -98,7 +98,8 @@ This functions returns a probability distribution of attention scores.
 ![Output examples:](../deepseek_assets/6-softmax.png)
 
 The variables Q and K represent the query and key vectors, and the numerator represents the dot product between the keys and queries. We then divide the values by the square root of the dimension for numerical stability. It’s not just for stability — scaling by √d helps prevent dot products from growing too large with higher dimensions, which would make the softmax gradients very small.
-During trainnig, the model predicts every possible token for efficiency.
+We then multiply them by the Value matrix `V` to get the enriched representantions of each token.
+During training, the model predicts every possible token for efficiency.
 ![Output examples:](../deepseek_assets/17.webp)
 
  ## Causal Attention
