@@ -102,11 +102,24 @@ During trainnig, the model predicts every possible token for efficiency.
 ![Output examples:](../deepseek_assets/17.webp)
 
  ## Causal Attention
-In order to prevent later words from influencing earlier words, we need to ensure that certain spots in the attention pattern are forced to be zero. However, setting them equal to zero would disrupt the normalization of the columns, so we need to find another solution. A suitable solution is to handle certain entries before applying softmax is to set them to negative infinity. This ensures that after applying softmax, those entires becom zero while the column remain normalized. This process is called masked  or causal attention , which is widely used in GPT models to prevent later tokens from influencing earlier ones.
+In order to prevent later words from influencing earlier words, we need to ensure that certain positions in the attention score matrix are masked. Directly setting them to zero before softmax would interfere with the normalization process, since softmax ensures probabilities across each row sum to 1.
+
 
 ![Output examples:](../deepseek_assets/causal_attention.jpeg)
 
+Instead, a suitable solution is to set those entries to negative infinity before applying softmax. This ensures that, after softmax, those entries become effectively zero, while the row remains properly normalized. This process is called masked (or causal) attention, and it is widely used in models like GPT to prevent later tokens from influencing earlier ones.
 
+- In causal attention, we mask out future positions (above the diagonal) so that a token can only attend to itself and earlier tokens.
+- After masking, we apply softmax across each row . This guarantees that the attention weights for each token sum to 1.
+- The attention scores are also scaled by the square root of d_key (the dimension of the key vectors). This scaling prevents large dot-product values from making the softmax distribution too peaky.
+
+## Multi-head attention 
+Consider the following sentence below:
+- The bank is by the river.
+When you look at this sentence, you can see that this sentence has two meanings.
+  1. You may interpret the word bank as a financial institution.
+  2.  You may also intepret the word bank as riverbank.
+ 
 
 
 
