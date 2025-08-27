@@ -118,7 +118,15 @@ In order to prevent later words from influencing earlier words, we need to ensur
 ![Output examples:](../deepseek_assets/25.webp)
 ![Output examples:](../deepseek_assets/26.webp)
 ![Output examples:](../deepseek_assets/27.webp)
-
+![Output examples:](../deepseek_assets/28.webp)
+![Output examples:](../deepseek_assets/29.webp)
+![Output examples:](../deepseek_assets/30.webp)
+![Output examples:](../deepseek_assets/31.webp)
+![Output examples:](../deepseek_assets/32.webp)
+![Output examples:](../deepseek_assets/33.webp)
+![Output examples:](../deepseek_assets/34.webp)
+![Output examples:](../deepseek_assets/35.webp)
+![Output examples:](../deepseek_assets/36.webp)
 
 
 
