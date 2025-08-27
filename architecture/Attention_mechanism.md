@@ -115,10 +115,18 @@ Instead, a suitable solution is to set those entries to negative infinity before
 
 ## Multi-head attention 
 Consider the following sentence below:
-- The bank is by the river.
-When you look at this sentence, you can see that this sentence has two meanings.
-  1. You may interpret the word bank as a financial institution.
-  2.  You may also intepret the word bank as riverbank.
+- "The bank is by the river."
+- When you look at this sentence, you can see that this sentence has two meanings.
+  1. The word bank could mean a financial institution.
+  2. The word bank could mean a riverbank. 
+
+If we used single-head self attention, the model might only captures one of these persepectives at a time.
+
+Multi-head attention, however, allows the model to look at the same sentence from multiple persepectives simulataneously:
+  - One head may focus on the fact that bank is a finacial institution.
+  - Another head may focus on that bank is simply a riverbank
+In this way, multi-head attention enriches the representation of the sequence by combining different contextual views into a single, more meaniningful understanding.
+    
  
 
 
