@@ -105,28 +105,6 @@ During trainnig, the model predicts every possible token for efficiency.
 In order to prevent later words from influencing earlier words, we need to ensure that certain spots in the attention pattern are forced to be zero. However, setting them equal to zero would disrupt the normalization of the columns, so we need to find another solution. A suitable solution is to handle certain entries before applying softmax is to set them to negative infinity. This ensures that after applying softmax, those entires becom zero while the column remain normalized. This process is called masked  or causal attention , which is widely used in GPT models to prevent later tokens from influencing earlier ones.
 
 
-![Output examples:](../deepseek_assets/19.webp)
-
-![Output examples:](../deepseek_assets/20.webp)
-
-
-
-
-
-![Output examples:](../deepseek_assets/23.webp)
-![Output examples:](../deepseek_assets/24.webp)
-![Output examples:](../deepseek_assets/25.webp)
-![Output examples:](../deepseek_assets/26.webp)
-![Output examples:](../deepseek_assets/27.webp)
-![Output examples:](../deepseek_assets/28.webp)
-![Output examples:](../deepseek_assets/29.webp)
-![Output examples:](../deepseek_assets/30.webp)
-![Output examples:](../deepseek_assets/31.webp)
-![Output examples:](../deepseek_assets/32.webp)
-![Output examples:](../deepseek_assets/33.webp)
-![Output examples:](../deepseek_assets/34.webp)
-![Output examples:](../deepseek_assets/35.webp)
-![Output examples:](../deepseek_assets/36.webp)
 
 
 
