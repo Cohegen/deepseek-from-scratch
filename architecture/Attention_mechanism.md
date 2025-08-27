@@ -126,6 +126,8 @@ If we used single-head self attention, the model might only captures one of thes
 Multi-head attention, however, allows the model to look at the same sentence from multiple persepectives simulataneously:
   - One head may focus on the fact that bank is a finacial institution.
   - Another head may focus on that bank is simply a riverbank
+
+
 In this way, multi-head attention enriches the representation of the sequence by combining different contextual views into a single, more meaniningful understanding.
 
 For coded examples of attention mechanism look into `notebooks/attention_mechanisms.ipynb`
