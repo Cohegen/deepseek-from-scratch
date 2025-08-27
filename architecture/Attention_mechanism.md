@@ -109,6 +109,8 @@ In order to prevent later words from influencing earlier words, we need to ensur
 
 ![Output examples:](../deepseek_assets/20.webp)
 
+![Output examples:](../deepseek_assets/21.webp)
+
 
 
 
