@@ -1,5 +1,4 @@
-
- ## Attention in transformers
+## Attention in transformers
 
 # Why We Need the Transformer in Deep Learning
 
